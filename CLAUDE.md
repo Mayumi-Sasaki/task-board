@@ -6,11 +6,38 @@
 
 ## 技術スタック
 
-（プロジェクト開始時に更新すること）
+| 用途 | ライブラリ／ツール |
+|------|------------------|
+| UI | React 18 |
+| ビルド | Vite 6 |
+| 言語 | JavaScript (JSX) |
+| スタイル | CSS (vanilla) |
+| 永続化 | localStorage |
+| CI/CD | GitHub Actions |
+
+## デプロイ先
+
+https://mayumi-sasaki.github.io/task-board/
 
 ## ディレクトリ構成
 
-（プロジェクト開始時に更新すること）
+```
+src/
+  App.jsx      # ルートコンポーネント（状態管理・ロジック含む）
+  App.css      # App コンポーネントのスタイル
+  main.jsx     # エントリーポイント
+  index.css    # グローバルスタイル
+.github/
+  workflows/
+    deploy.yml # GitHub Pages 自動デプロイ
+```
+
+## コンポーネント命名規約
+
+- ファイル名・コンポーネント名ともに **PascalCase**（例: `TaskItem.jsx`）
+- 1ファイル1コンポーネントを原則とする
+- ページ相当のコンポーネントは `Page` サフィックスを付けない（例: `Board.jsx`）
+- ユーティリティ関数はコンポーネントファイル外に切り出し、**camelCase** で命名する
 
 ## 開発ルール
 
